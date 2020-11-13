@@ -1,4 +1,3 @@
-<html>
 <head>
 <title>ITF Lab</title>
 </head>
@@ -13,13 +12,13 @@ if (mysqli_connect_errno($conn))
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <table width="600" border="1">
+<thead class="thead-dark">
   <tr>
-  <thead class="thead-dark">
     <th width="100"> <div align="center">Name</div></th>
     <th width="350"> <div align="center">Comment </div></th>
     <th width="150"> <div align="center">Link </div></th>
-  </thead>
   </tr>
+</thead>
 <?php
 while($Result = mysqli_fetch_array($res))
 {
