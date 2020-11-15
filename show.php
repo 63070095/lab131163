@@ -28,12 +28,12 @@ while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
-    <td><?php echo $row["ID"];?></td>
+    <td><?php echo $Result["ID"];?></td>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
     <td><div align="center"><a href="edit.php">แก้ไข</a></div></td>
-    <td><div align="center"><a href="delete.php?id=$id\">ลบ</a></div></td>
+    <td><div align="center"><a href="delete.php?ID=$row[0]">ลบ</a></div></td>
   </tr>
 <?php
 }
