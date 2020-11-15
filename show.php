@@ -1,11 +1,3 @@
-<html>
-<head>
-<title>ITF Lab Database</title>
-</head>
-<body>
-<?php
-$conn = mysqli_init();
-mysqli_real_connect($conn, 'nidaitf.mysql.database.azure.com', 'it63070095@nidaitf', 'CDBhlh62', 'ITFLab', 3306);
 if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
@@ -28,7 +20,7 @@ while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
-    <td><?php echo $row_show['id']?></td>
+    <td><?php echo $row['id'];?></td>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
