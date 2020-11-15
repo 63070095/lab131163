@@ -38,7 +38,7 @@ while($Result = mysqli_fetch_array($res))
   </table>
 </div>
 <div class="container">
-    <table class="table">
+    <table class="table table-dark">
         <table width="600" border="1">
             <tr>
             <td><div align="center"><a href="form.html">เพิ่ม</a></div></td>
