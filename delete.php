@@ -13,7 +13,7 @@ $comment = $_POST['comment'];
 $link = $_POST['link'];
 
 
-$sql = "DELETE FROM guestbook WHERE id=<?=$row_show[id]?>";
+$sql = "DELETE FROM guestbook WHERE id='$del_id';";
 
 
 if (mysqli_query($conn, $sql)) {
