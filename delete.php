@@ -1,4 +1,4 @@
-<<?php
+<?php
 
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'nidaitf.mysql.database.azure.com', 'it63070095@nidaitf', 'CDBhlh62', 'ITFLab', 3306);
@@ -13,7 +13,7 @@ $comment = $_POST['comment'];
 $link = $_POST['link'];
 
 
-$sql = "DELETE FROM guestbook WHERE id='$del_name';";
+$sql = "DELETE FROM guestbook WHERE id='$name';";
 
 
 if (mysqli_query($conn, $sql)) {
