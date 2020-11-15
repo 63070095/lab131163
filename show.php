@@ -41,7 +41,7 @@ while($Result = mysqli_fetch_array($res))
     <table class="table table-hover">
         <table width="600" border="1">
             <tr>
-            <td><div align="center"><a href="insert.php">เพิ่ม</a></div></td>
+            <td><div align="center"><a href="form.html">เพิ่ม</a></div></td>
             </tr>
         </table>
     </table>
