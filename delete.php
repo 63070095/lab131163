@@ -8,7 +8,7 @@ if (mysqli_connect_errno($conn))
 }
 
 
-$name = $_REQUEST['Name'];
+$name = $_RESULT['Name'];
 
 
 $sql = "DELETE FROM guestbook WHERE $name;
