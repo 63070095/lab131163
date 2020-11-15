@@ -37,6 +37,17 @@ while($Result = mysqli_fetch_array($res))
     </table>
   </table>
 </div>
+<div class="container">
+    <table class="table table-hover">
+        <table width="600" border="1">
+            <tr>
+            <td><div align="center"><a href="insert.php">เพิ่ม</a></div></td>
+            </tr>
+        </table>
+    </table>
+</div>
+
+
 <?php
 mysqli_close($conn);
 ?>
