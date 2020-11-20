@@ -12,7 +12,8 @@ $name = $_POST['name'];
 $comment = $_POST['comment'];
 
 
-$sql = "UPDATE guestbook SET Comment='$name' WHERE Name='$comment' ";
+$sql = "DELETE FROM guestbook WHERE name='$name'";
+$sql = "DELETE FROM guestbook WHERE Comment='$comment'";
 
 
 if (mysqli_query($conn, $sql)) {
