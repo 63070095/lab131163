@@ -29,17 +29,16 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
     </div>
   <table width="600" border="1" class="table table-sm table-striped" class="center" class="ex1">
     <tr class="warning">
-      <th width="200"> <div align="center">ID</div></th>
       <th width="200"> <div align="center">Name</div></th>
       <th width="350"> <div align="center">Comment </div></th>
       <th width="50"> <div align="center">Action</div></th>
     </tr>
   <?php
   while($Result = mysqli_fetch_array($res))
+  $row = 1
   {
   ?>
     <tr>
-      <td><center><?php echo $Result['ID'];?></center></td>
       <td><center><?php echo $Result['Name'];?></center></td>
       <td><center><?php echo $Result['Comment'];?></center></td>
       <td><center><a href="form edit.html"><input type="submit" value="EDIT" class="btn btn-secondary"></a>&nbsp;&nbsp;<a href="form delete.html"><input type="submit" value="DELETE"  class="btn btn-secondary"></a></center></td>
