@@ -8,15 +8,14 @@ if (mysqli_connect_errno($conn))
 }
 
 
-$name = $_POST['Name'];
-$comment = $_POST['Comment'];
+$ID = $_REQUEST['ID'];
 
 
-$sql = "DELETE FROM guestbook WHERE name='$name'";
-$sql = "DELETE FROM guestbook WHERE comment='$comment'";
+$sql = "DELETE FROM guestbook WHERE ID='$ID'";
 
 if (mysqli_query($conn, $sql)) {
     echo "Delete successfully";
+    echo "window.location = 'Show.php';";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
