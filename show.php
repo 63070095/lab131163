@@ -40,7 +40,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
     <tr>
       <td><center><?php echo $Result['Name'];?></center></td>
       <td><center><?php echo $Result['Comment'];?></center></td>
-      <td><center><a href="form edit.html"><input type="submit" value="EDIT" class="btn btn-secondary"></a>&nbsp;&nbsp;<a href="form delete.html"><input type="submit" value="DELETE"  class="btn btn-danger"></a></center></td>
+      <td><center><a href="form edit.html"><input type="submit" value="EDIT" class="btn btn-secondary"></a>&nbsp;&nbsp;<a href="form delete.html"><input type="submit" value="DELETE"  class="btn btn-secondary"></a></center></td>
     </tr>
   <?php
   }
