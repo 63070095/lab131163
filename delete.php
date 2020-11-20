@@ -15,7 +15,8 @@ $sql = $sql = "DELETE FROM guestbook WHERE name='$name'";
 $sql = "DELETE FROM guestbook WHERE Comment='$comment'";
 
 if (mysqli_query($conn, $sql)) {
-    echo "Delete successfully! CONGRATULATION!";
+    echo "Delete successfully";
+    echo '<a href="https://nidaweb.azurewebsites.net/show.php"> click here to open first page </a>';
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
