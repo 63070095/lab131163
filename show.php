@@ -38,10 +38,8 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
   while($Result = mysqli_fetch_array($res))
   {
   ?>
-  <?php $count = 1;
-        foreach($data as $row){ ?>
     <tr>
-      <td><center><?php echo $count;?></center></td>
+      <td><center><?php echo $row['ID'];?></center></td>
       <td><center><?php echo $Result['Name'];?></center></td>
       <td><center><?php echo $Result['Comment'];?></center></td>
       <td><center><a href="form edit.html"><input type="submit" value="EDIT" class="btn btn-secondary"></a>&nbsp;&nbsp;<a href="form delete.html"><input type="submit" value="DELETE"  class="btn btn-secondary"></a></center></td>
