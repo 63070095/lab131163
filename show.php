@@ -11,6 +11,13 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
+if($_REQUEST['ID'] != "") //ถ้า ค่า del_id ไม่เท่ากับค่าว่างเปล่า
+{
+$ID = $_REQUEST['ID'];
+$sql_del = "DELETE from guestbook where id = '$ID';";
+mysql_query($sql_del) or die(mysql_error());
+echo "ลบข้อมูล ID $del_id เรียบร้อยแล้ว";
+}
 ?>
 <div class="container">           
   <table class="table table-hover">
@@ -28,7 +35,7 @@ while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
-    <td><?php echo $Result["ID"];?></td>
+    <td><?=$row_show['ID']?></td>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
