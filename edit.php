@@ -12,11 +12,11 @@ $name = $_POST['name'];
 $comment = $_POST['comment'];
 
 
-$sql = "UPDATE guestbook SET Comment='$comment' WHERE Name='$name' ";
+$sql = "UPDATE guestbook SET Comment='$name' WHERE Name='$comment' ";
 
 
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully!";
+    echo "Edited successfully!";
     echo '<a href="https://nidaweb.azurewebsites.net/show.php"> click here to open first page </a>';
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
