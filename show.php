@@ -35,7 +35,6 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
     </tr>
   <?php
   while($Result = mysqli_fetch_array($res))
-  $row = 1
   {
   ?>
     <tr>
